@@ -2,6 +2,12 @@ import string
 
 
 def Split(split_str, sep=string.whitespace):
+    """
+    Функция для разбития строки по указанному разделителю
+    :param split_str: строка, которую необходимо разбить
+    :param sep:  разделитель, который необходимо использовать для разбития строки
+    :return: список частей сторки, разделенных разделителем
+    """
     print('aeksei94@gmail.com')
 
     # Проверка корректности ввода
@@ -34,7 +40,7 @@ def Split(split_str, sep=string.whitespace):
     return split_result
 
 
-def compare_with_string_split_method(s, sep=string.whitespace):
+def __compare_with_string_split_method(s, sep=string.whitespace):
     my_split = Split(s, sep)
     in_build_split = s.split(sep)
     if my_split != in_build_split:
@@ -42,8 +48,9 @@ def compare_with_string_split_method(s, sep=string.whitespace):
 
 
 if __name__ == '__main__':
-    compare_with_string_split_method("")
-    compare_with_string_split_method("", "1")
-    compare_with_string_split_method("1234", "1")
-    compare_with_string_split_method("123", "2")
-    compare_with_string_split_method("123", "3")
+    __compare_with_string_split_method("")
+    __compare_with_string_split_method("", "1")
+    __compare_with_string_split_method("1234", "1")
+    __compare_with_string_split_method("123", "2")
+    __compare_with_string_split_method("123", "3")
+    __compare_with_string_split_method("123ауц", "л")
